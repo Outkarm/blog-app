@@ -61,10 +61,10 @@
 
 <!-- Features -->
 
-<!-- ### Key Features <a name="key-features"></a>
+### Key Features <a name="key-features"></a>
 
-- **[key_feature_1]**
-- **[key_feature_2]**
+- **[Model]**
+<!-- - **[key_feature_2]**
 - **[key_feature_3]** -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -170,13 +170,13 @@ Example:
 
 <!-- FUTURE FEATURES -->
 
-<!-- ## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[controller]**
+- [ ] **[view]**
+<!-- - [ ] **[new_feature_3]** -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
