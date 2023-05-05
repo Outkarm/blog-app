@@ -74,7 +74,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 <p>...Coming Soon</p>
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+<!-- - [Live Demo Link](https://yourdeployedapplicationlink.com) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
