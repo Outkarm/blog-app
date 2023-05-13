@@ -1,1 +1,29 @@
-<h1>Posts</h1>
+<div class='user-details'>
+<div class='user-cont'>
+    <div class='u-img-cont'>
+        <img src= <%= @users.photo %> alt= <%= @users.name %> >
+    </div>
+    <div class='u-info-cont uic'>
+        <h1><%=@users.name %></h1>
+        <p>Number of Posts : <%=@users.posts_counter || 0%></p>
+    </div>
+</div>
+<% @users.posts.each_with_index do |post,index| %>
+<div>
+    <div class='post-sec'>
+        <h2><%= link_to post.title, user_post_path(@users, post) %></h2>
+        <p><%=post.text%></p>
+        <div class='stats'>Comments: <%=post.comments_counter%> Likes : <%=post.likes_counter%> </div>
+    </div>
+    <div class='comment-sec'>
+         <%post.comments.each do |comment|%>
+                <div>
+                <%=comment.author.name%> : <%=comment.text %>
+                </div>
+        <%end%>
+    </div>
+</div>
+<%end%>
+ <a class='btn' href="#">Pagination</a>
+</div>
+
