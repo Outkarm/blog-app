@@ -17,6 +17,13 @@
             </div>
         <%end%>
     </div>
+    <div>
+    <a href="<%= url_for(new_user_post_comment_path(@users, @posts)) %>" class="button button-wide">Add Comment</a>
+  </div>
+
+  <%= form_with url: user_post_likes_path(@users, @posts), class: 'like-form' do |form| %>
+    <%= form.submit 'Like Post', class: 'btn btn-enteract' %>
+  <% end %>
 </div>
 
 
