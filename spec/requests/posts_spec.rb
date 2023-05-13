@@ -5,7 +5,7 @@ RSpec.describe 'Posts', type: :request do
     describe '/posts/index' do
       before(:each) do
         user = User.create!(name: 'Mark', photo: 'https://i.imgur.com/1.jpg', bio: 'Hey I am Mark.',
-            posts_counter: 1)
+                            posts_counter: 1)
         get "/users/#{user.id}/posts"
       end
 
@@ -25,7 +25,7 @@ RSpec.describe 'Posts', type: :request do
     describe '/posts/show' do
       before(:each) do
         user = User.create!(name: 'Mark', photo: 'https://i.imgur.com/1.jpg', bio: 'Hey I am Mark.',
-            posts_counter: 1)
+                            posts_counter: 1)
         post = Post.create!(author: user, title: 'First Post', text: 'This is a the first post.',
                             comments_counter: 0, likes_counter: 0)
         get "/users/#{user.id}/posts/#{post.id}"

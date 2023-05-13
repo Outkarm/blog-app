@@ -22,7 +22,7 @@ RSpec.describe 'Users', type: :request do
     describe 'get users from /users/:id' do
       it 'returns a successful response' do
         user = User.create!(name: 'Mark', photo: 'https://i.imgur.com/1.jpg', bio: 'Hey I am Mark.',
-            posts_counter: 1)
+                            posts_counter: 1)
         get "/users/#{user.id}"
 
         expect(response).to be_successful
