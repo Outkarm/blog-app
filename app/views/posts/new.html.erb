@@ -1,19 +1,15 @@
-<section class=''>
-  <h1 class=''>Create a new Post.</h1>
-
-  <%= form_with model: @post, url: user_posts_path do |form| %>
-    <div class='form_title'>
+<div>
+  <%= form_with model: @posts, url: user_posts_path, data: { turbo: false } do |form| %>
+    <div>
       <%= form.label :title %>
-      <%= form.text_field :title, placeholder: 'Enter Post Title', required: true, class: 'form_input'  %>
+      <%= form.text_field :title%>
     </div>
-
-    <div class=''>
-      <%= form.label :text%>
-      <%= form.text_area :text, placeholder: 'Enter Post Description', required: true, class: 'form_text_area' %>
+    <div class="mb-4">
+      <%= form.label :text %>
+      <%= form.text_area :text %>
     </div>
-
-    <div class='btn'>
-      <%= form.submit "Create Post"%>
+    <div>
+      <%= form.submit "Create Post" %>
     </div>
   <% end %>
-</section>
+</div>
