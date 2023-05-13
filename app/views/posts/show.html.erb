@@ -1,1 +1,22 @@
-<h1>Here is a list of posts for a given user<h1>
+<div class='post-details'>
+    <div class='pdh-cont'>
+        <div class='pd-postH'>
+            <div class=''>
+                <h3>Post <%= @posts.id%> by <%=@posts.author.name%></h3>
+            </div>
+            <div>Comments: <%=@posts.comments_counter%> Likes : <%=@posts.likes_counter%> </div>
+        </div>
+        <p class='post_text'><%= @posts.text %></p>
+  </div>
+    <div class='comment-sec'>
+    <%@posts.comments.each do |comment|%>
+            <div>
+                <div>
+                <%=comment.author.name%> : <%=comment.text %>
+                </div>
+            </div>
+        <%end%>
+    </div>
+</div>
+
+

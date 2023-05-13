@@ -1,1 +1,31 @@
-<h1>user 1</h1>
+<div class='user-details' >
+<div class='user-cont'>
+    <div class='u-img-cont'>
+        <img src= <%= @users.photo %> alt= <%= @users.name %> >
+    </div>
+    <div class='u-info-cont uic'>
+        <h1><%=@users.name %></h1>
+        <p class='postno '>Number of Posts : <%=@users.posts_counter || 0%></p>
+    </div>
+</div>
+<div class = 'bio-sec'>
+Bio
+<p><%= @users.bio %></p>
+</div>
+<div class='all-user-post'>
+    <% if @users.posts.empty? %>
+      <div class='post-sec'><%= @users.name %> has no post</div>
+    <% end %>
+
+    <% @users.recent_post.each_with_index do |post, index| %>
+      <div class='post-sec'>
+        <h3><%= link_to post.title, user_post_path(@users, post) %></h3>
+        <p class=''><%= post.text %></p>
+        <div class=''>
+          <div class='stats'>Comments: <%=post.comments_counter%> Likes : <%=post.likes_counter%> </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <a class='btn' href="<%= @users.id %>/posts">See all posts</a>
+</div>

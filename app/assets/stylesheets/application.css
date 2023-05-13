@@ -13,3 +13,115 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.users {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.user-cont {
+  display: flex;
+  gap: 70px;
+  width: 100%;
+}
+
+.u-img-cont {
+  width: 150px;
+  height: 120px;
+  border: 3px solid black;
+}
+
+.u-info-cont {
+  width: 60%;
+  height: 120px;
+  border: 3px solid black;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uic {
+  width: 100%;
+}
+
+.user-name {
+  text-decoration: none;
+}
+
+.postno {
+  height: 40%;
+  display: flex;
+  align-self: last baseline;
+  align-items: flex-end;
+}
+
+.user-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bio-sec {
+  border: 2px black solid;
+  height: 100px;
+}
+
+.all-user-post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-sec {
+  border: 2px solid black;
+  height: 80px;
+  padding: 10px;
+}
+
+.stats {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: 2px solid black;
+  width: 120px;
+  display: flex;
+  align-self: center;
+  text-align: center;
+}
+
+.comment-sec {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.post-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdh-cont {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.pd-postH {
+  display: flex;
+  justify-content: space-between;
+}
