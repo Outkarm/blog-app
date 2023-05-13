@@ -14,7 +14,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+    <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -76,7 +76,7 @@
 <p>...Coming Soon</p> -->
 <!-- - [Live Demo Link](https://yourdeployedapplicationlink.com) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 
@@ -140,9 +140,9 @@ To run tests, run the following command:
 
 -
 
-### Deployment
+<!-- ### Deployment
 
-You can deploy this project using:
+You can deploy this project using: -->
 
 <!--
 Example:
