@@ -40,6 +40,11 @@ RSpec.configure do |config|
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
+  # Selenium::WebDriver::Chrome.path = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+
+  # Capybara.register_driver :selenium do |app|
+  #   Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  # end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -61,3 +66,5 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+Capybara.default_driver = :selenium_chrome
