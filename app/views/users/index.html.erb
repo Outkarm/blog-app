@@ -2,15 +2,17 @@
 <%@users.each do |user|%>
 <div class='user-cont'>
     <div class='u-img-cont'>
-        <img src= <%= user.photo %> alt= <%= user.name %> >
+        <img class='profile-img' src= <%= user.photo %> alt= <%= user.name %> />
     </div>
     <div class='u-info-cont'>
-        <h1 class='user-name' ><%=link_to user.name, user_path(user) %></h1>
+        <h1 class='user-name' ><%=link_to user.name, user_path(user.id) %></h1>
         <p class='postno'>Number of Posts : <%=user.posts_counter || 0%></p>
     </div>
 </div>
 <%end%>
 <div>
+ <% if @users.present? %>
   <a href="<%= url_for("/users/#{@users.first.id}/posts/new") %>">Create new post</a>
+<% end %>
 </div>
 </div>
