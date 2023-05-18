@@ -172,9 +172,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[controller]**
-- [ ] **[view]**
-<!-- - [ ] **[new_feature_3]** -->
+- [x] **[controller]**
+- [x] **[view]**
+- [ ] **[style_form]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,11 +198,11 @@ If you like this project, drop a star ⭐️ and follow for more.
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank...
+I would like to thank  -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- FAQ (optional) -->
 

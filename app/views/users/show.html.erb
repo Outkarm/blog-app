@@ -19,7 +19,9 @@ Bio
 
     <% @users.recent_post.each_with_index do |post, index| %>
       <div class='post-sec'>
-        <h3><%= link_to post.title, user_post_path(@users, post) %></h3>
+        <a href=<%= "/users/#{@users.id}/posts/#{post.id}" %> >
+          <h3><%= link_to post.title, user_post_path(@users, post) %></h3>
+        </a>
         <p class=''><%= post.text %></p>
         <div class=''>
           <div class='stats'>Comments: <%=post.comments_counter%> Likes : <%=post.likes_counter%> </div>

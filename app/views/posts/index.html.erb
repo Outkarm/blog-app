@@ -11,7 +11,9 @@
 <% @users.posts.each_with_index do |post,index| %>
 <div>
     <div class='post-sec'>
-        <h2><%= link_to post.title, user_post_path(@users, post) %></h2>
+        <a href=<%= "/users/#{@users.id}/posts/#{post.id}" %> >
+            <h4><%= post.title %></h4>
+          </a>
         <p><%=post.text%></p>
         <div class='stats'>Comments: <%=post.comments_counter%> Likes : <%=post.likes_counter%> </div>
     </div>
@@ -24,6 +26,8 @@
     </div>
 </div>
 <%end%>
- <a class='btn' href="#">Pagination</a>
+ <div>
+    <a href="<%= url_for("/users/#{@users.id}/posts/new") %>">Create new post</a>
+  </div>
 </div>
 
