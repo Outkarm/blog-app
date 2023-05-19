@@ -1,47 +1,46 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'GET' do
-    describe '/posts/index' do
-      before(:each) do
-        user = User.create!(name: 'Mark', photo: 'https://i.imgur.com/1.jpg', bio: 'Hey I am Mark.',
-                            posts_counter: 1)
-        get "/users/#{user.id}/posts"
-      end
+  describe 'GET /users/:user_id/posts' do
+    let(:user) { User.create(name: 'John Doe') }
+    let!(:post1) { Post.create(title: 'First Post', text: 'This is the first post', author: user) }
+    let!(:post2) { Post.create(title: 'Second Post', text: 'This is the second post', author: user) }
 
-      it('returns a success response') do
-        expect(response).to have_http_status(200)
-      end
-
-      it('renders index template') do
-        expect(response).to render_template(:index)
-      end
-
-      it('includes placeholder text') do
-        expect(response.body).to include('<h1>Posts</h1>')
-      end
+    it 'renders the index template' do
+      get "/users/#{user.id}/posts"
+      expect(response).to render_template(:index)
     end
 
-    describe '/posts/show' do
-      before(:each) do
-        user = User.create!(name: 'Mark', photo: 'https://i.imgur.com/1.jpg', bio: 'Hey I am Mark.',
-                            posts_counter: 1)
-        post = Post.create!(author: user, title: 'First Post', text: 'This is a the first post.',
-                            comments_counter: 0, likes_counter: 0)
-        get "/users/#{user.id}/posts/#{post.id}"
-      end
+    it 'returns a success response' do
+      get "/users/#{user.id}/posts"
+      expect(response).to have_http_status(:success)
+    end
 
-      it('returns a success response') do
-        expect(response).to have_http_status(200)
-      end
-
-      it('renders show template') do
-        expect(response).to render_template(:show)
-      end
-
-      it('includes placeholder text') do
-        expect(response.body).to include('<h1>Here is a list of posts for a given user<h1>')
-      end
+    it 'displays the titles of all posts' do
+      get "/users/#{user.id}/posts"
+      expect(response.body).to include(post1.title)
+      expect(response.body).to include(post2.title)
     end
   end
+
+  describe 'GET /users/:user_id/posts/:id' do
+    let(:user) { User.create(name: 'John Doe') }
+    let(:post) { Post.create(title: 'Sample Post', text: 'This is a sample post', author: user) }
+
+    it 'renders the show template' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to render_template(:show)
+    end
+
+    it 'returns a success response' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to have_http_status(:success)
+    end
+    it 'returns a status 200' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response.status).to eq(200)
+    end
+  end
+
+  # Add tests for other actions (index, new, create) here
 end

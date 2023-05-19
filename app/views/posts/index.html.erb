@@ -1,10 +1,10 @@
 <div class='user-details'>
 <div class='user-cont'>
     <div class='u-img-cont'>
-        <img src= <%= @users.photo %> alt= <%= @users.name %> >
+        <img src= '<%= @users.photo %>' alt= <%= @users.name %> class='profile-img' />
     </div>
     <div class='u-info-cont uic'>
-        <h1><%=@users.name %></h1>
+        <h1 class = 'post-num'><%=@users.name %></h1>
         <p>Number of Posts : <%=@users.posts_counter || 0%></p>
     </div>
 </div>
@@ -15,7 +15,7 @@
             <h4><%= post.title %></h4>
           </a>
         <p><%=post.text%></p>
-        <div class='stats'>Comments: <%=post.comments_counter%> Likes : <%=post.likes_counter%> </div>
+        <div class='stats'>Comments: <%=post.comments_counter%> Likes: : <%=post.likes_counter%> </div>
     </div>
     <div class='comment-sec'>
          <%post.comments.each do |comment|%>
@@ -26,8 +26,8 @@
     </div>
 </div>
 <%end%>
- <div>
+ <button>
     <a href="<%= url_for("/users/#{@users.id}/posts/new") %>">Create new post</a>
-  </div>
+  </button>
 </div>
 
