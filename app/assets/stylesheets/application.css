@@ -137,3 +137,17 @@ img {
   gap: 10px;
   justify-content: center;
 }
+
+input,
+textarea {
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 10px;
+  color: #172b4d;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+}
