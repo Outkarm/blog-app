@@ -133,8 +133,6 @@ img {
 
 .field {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
   justify-content: center;
 }
 
@@ -151,3 +149,7 @@ textarea {
   font-size: 17px;
   line-height: 20px;
 }
+
+.rm{
+  width: 20%;
+}%

@@ -5,7 +5,7 @@
         <img class='profile-img' src= <%= user.photo %> alt= <%= user.name %> />
     </div>
     <div class='u-info-cont'>
-        <h1 class='user-name' ><%=link_to user.name, user_path(user.id) %></h1>
+        <h1 class='user-name' ><%=link_to user.name, user %></h1>
         <p class='postno'>Number of Posts : <%=user.posts_counter || 0%></p>
     </div>
 </div>

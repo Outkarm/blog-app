@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # get '/users', to: 'users#index'
   # get '/users/:id', to: 'users#show'
@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   # get '/users/:user_id/posts/:id', to: 'post#show'
   root'users#index'
 
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :new, :create] do
-      resources :comments, only: [:new, :create]
-      resources :likes, only: [:create]
+  resources :users, only: %i[index show] do
+    resources :posts, only: %i[index show new create] do
+      resources :comments, only: %i[new create]
+      resources :likes, only: %i[create]
     end
   end
 
